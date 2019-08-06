@@ -2,9 +2,9 @@ var start = new Date();
 
 /***** EDIT THESE VALUES *****/
 
-var players = 2;
+var players = 4;
 var stackDrawCards = true;
-var accumulate = true;
+var accumulate = false;
 var adjustCardsForFrequency = false;
 var verbose = true;
 var totallySilent = false;
