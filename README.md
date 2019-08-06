@@ -3,7 +3,7 @@ simple node.js program to play Uno and gather stats
 
 Rapidly plays Uno, prints out some metrics about the games played when finished.
 
-vars:
+settings:
 
 players - number of players
 
