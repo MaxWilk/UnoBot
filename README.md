@@ -1,13 +1,15 @@
 # UnoPlayingBot
+REQUIRES NODE.JS
+
 simple node.js program to play Uno and gather stats
 
 Rapidly plays Uno, prints out some metrics about the games played when finished, also prints turns while they happen if "verbose" is true
 
-to use:
+# to use:
 
 simply put all of the files in the same directory, edit the settings to your liking, and run run.bat
 
-settings:
+# settings:
 
 players - number of players
 
