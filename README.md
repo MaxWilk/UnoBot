@@ -1,4 +1,4 @@
-# UnoBot
+# UnoPlayingBot
 simple node.js program to play Uno and gather stats
 
 Rapidly plays Uno, prints out some metrics about the games played when finished, also prints turns while they happen if "verbose" is true
