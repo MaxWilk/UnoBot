@@ -1,2 +1,8 @@
 cd %cd%
-cmd /k node uno.js
+node uno.js
+:loop
+pause
+@echo off
+cls
+call node uno.js
+goto :loop
