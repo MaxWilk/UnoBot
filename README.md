@@ -1,5 +1,5 @@
 # UnoPlayingBot
-REQUIRES NODE.JS
+REQUIRES NODE.JS - https://nodejs.org/
 
 simple node.js program to play Uno and gather stats
 
