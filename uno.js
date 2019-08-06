@@ -1,10 +1,12 @@
+var fs = require('fs');
+
 var start = new Date();
 
 /***** EDIT THESE VALUES *****/
 
-var players = 4;
+var players = 2;
 var stackDrawCards = true;
-var accumulate = false;
+var accumulate = true;
 var adjustCardsForFrequency = false;
 var verbose = true;
 var totallySilent = false;
@@ -15,6 +17,34 @@ var secPerTurn = 5;
 var secPerAccumulation = 1;
 
 /***** END EDIT SECTION *****/
+
+try {  
+
+    var data = fs.readFileSync('settings.cfg', 'utf8');
+    var dataStr = data.toString();
+
+    var lines = data.split('\n');
+
+    players = parseInt(getValueFromSettingsLine(lines[0]));
+    stackDrawCards = getValueFromSettingsLine(lines[1]) == 'true';
+    accumulate = getValueFromSettingsLine(lines[2]) == 'true';
+    adjustCardsForFrequency = getValueFromSettingsLine(lines[3]) == 'true';
+    verbose = getValueFromSettingsLine(lines[4]) == 'true';
+    totallySilent = getValueFromSettingsLine(lines[5]) == 'true';
+    gamesToPlay = parseInt(getValueFromSettingsLine(lines[6]));
+    secPerTurn = parseFloat(getValueFromSettingsLine(lines[7]));
+    secPerAccumulation = parseFloat(getValueFromSettingsLine(lines[8]));
+
+} catch(e) {
+
+    console.log('Error:', e.stack);
+
+}
+
+function getValueFromSettingsLine(line) {
+    var rightOfEquals = line.split('=')[1];
+    return rightOfEquals.replace(/\s/g, '');
+}
 
 class Card {
     //0=red,1=blue,2=yellow,3=green
