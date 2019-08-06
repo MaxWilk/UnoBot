@@ -8,6 +8,7 @@ Rapidly plays Uno, prints out some metrics about the games played when finished,
 # to use:
 
 simply put all of the files in the same directory, edit the settings to your liking, and run run.bat.
+
 alternatively, cd to the directory and run "node uno.js".
 
 # settings:
